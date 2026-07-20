@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --pf-bg: #F5F4F0;
+  --pf-surface: #FFFFFF;
+  --pf-sidebar: #161616;
+  --pf-primary: #D95C41;
+  --pf-primary-hover: #BF4A30;
+  --pf-text: #1A1A1A;
+  --pf-muted: #666666;
+  --pf-border: #E5E5E5;
+  --pf-success: #3A6B58;
+  --pf-warning: #E89B2D;
+  --pf-danger: #C13E3E;
+  --pf-info: #4A6E8C;
+}
+
+@layer base {
+  :root {
+    --background: 45 20% 96%;
+    --foreground: 0 0% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+    --primary: 12 66% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 10%;
+    --muted: 0 0% 94%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 0 0% 94%;
+    --accent-foreground: 0 0% 10%;
+    --destructive: 0 60% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 12 66% 55%;
+    --radius: 0.5rem;
+    --chart-1: 12 66% 55%;
+    --chart-2: 205 30% 42%;
+    --chart-3: 155 30% 32%;
+    --chart-4: 35 78% 55%;
+    --chart-5: 0 55% 50%;
+  }
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--pf-bg);
+  color: var(--pf-text);
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  font-feature-settings: "tnum" 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-family: 'Outfit', system-ui, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.pf-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #666;
+}
+
+.pf-sidebar {
+  background-color: var(--pf-sidebar);
+  background-image: radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 4px 4px;
+}
+
+.pf-card {
+  background: var(--pf-surface);
+  border: 1px solid var(--pf-border);
+  border-radius: 10px;
+}
+
+.pf-card-hover {
+  transition-property: transform, box-shadow, border-color;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+}
+.pf-card-hover:hover {
+  transform: translateY(-2px);
+  border-color: #d4d4d4;
+}
+
+.pf-btn-primary {
+  background-color: var(--pf-primary);
+  color: white;
+  transition-property: background-color, transform;
+  transition-duration: 180ms;
+}
+.pf-btn-primary:hover {
+  background-color: var(--pf-primary-hover);
+}
+
+.pf-tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+::selection {
+  background: var(--pf-primary);
+  color: white;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #d4d4d4; border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: #b4b4b4; }
